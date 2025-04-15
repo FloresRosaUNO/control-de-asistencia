@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Control de Asistencia</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+
+  <h1>Control de Asistencia</h1>
+
+  <form id="asistencia-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="tipo">Tipo de registro:</label>
+    <select id="tipo" required>
+      <option value="Entrada">Entrada</option>
+      <option value="Salida">Salida</option>
+    </select>
+
+    <label for="observaciones">Observaciones:</label>
+    <textarea id="observaciones" rows="3"></textarea>
+
+    <button type="submit">Registrar</button>
+  </form>
+
+  <div class="export-btn">
+    <button id="exportar">Exportar a Excel</button>
+  </div>
+
+ <table id="registros">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha</th>
+      <th>Entrada</th>
+      <th>Salida</th>
+      <th>Tiempo trabajado</th>
+      <th>Observaciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- registros van acá -->
+  </tbody>
+</table>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
